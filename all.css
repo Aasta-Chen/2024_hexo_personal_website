@@ -1,81 +1,166 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-
-*,*:before,*:after{
-  box-sizing:border-box
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
+
 body {
   padding-top: 60px;
   font-family: Noto Sans, sans-serif;
+  line-height: 1.5;
 }
 
 .header {
   background: #fff;
-  border-bottom: 1px solid #F1F1F1;
+  border-bottom: 1px solid #f1f1f1;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
-.header-inner{
+.header-inner {
   display: flex;
   align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   padding-top: 8px;
   padding-bottom: 8px;
 }
-@media(max-width:992px){
-  .header-inner{
-      justify-content: space-between;
+@media (max-width: 992px) {
+  .header-inner {
+    justify-content: space-between;
   }
 }
 .container {
   max-width: 1296px;
   margin: 0 auto;
 }
-@media(max-width:1295px){
-  .container{
+@media (max-width: 1295px) {
+  .container {
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -83,17 +168,17 @@ body {
 .logo {
   margin-right: 318px;
 }
-@media(max-width:992px){
+@media (max-width: 992px) {
   .logo {
     margin-right: 0px;
   }
 }
 .menu {
   display: flex;
-  gap: 40px
+  gap: 40px;
 }
 
-.menu .menu-list a{
+.menu .menu-list a {
   color: #000;
   font-size: 16px;
   line-height: 1.5;
@@ -154,13 +239,13 @@ body {
   display: none;
 }
 @media (max-width: 992px) {
-  .menu-btn{
+  .menu-btn {
     display: block;
   }
   .menu {
     display: none;
   }
- 
+
   .menu-control:checked ~ .menu {
     display: flex;
     width: 100%;
@@ -169,20 +254,131 @@ body {
   }
 }
 
+/* title */
+.title {
+  background: #fafafa;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-bottom: 120px;
+}
 
-
-
-.work {
+.title-slogan {
+  width: 670px;
   margin: 0 auto;
+  position: relative;
+  margin-bottom: 83px;
+}
+
+.title-slogan h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #1e1e1e;
+}
+
+.title h2::before {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-left.png?raw=true);
+}
+
+.title h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-right.png?raw=true);
+  position: absolute;
+  right: 0;
+}
+
+.experience {
+  width: 636px;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+}
+
+.experience-2b,
+.experience-2c {
+  width: 298px;
+  text-align: center;
+  position: relative;
+}
+
+.experience-2b h3,
+.experience-2c h3 {
+  color: #5b5b5b;
+  margin-bottom: 8px;
+}
+
+hr {
+  width: 24px;
+  border: 1px solid #c1c1c1;
+}
+
+.experience-2b p,
+.experience-2c p {
+  color: #3b3b3b;
+}
+
+@media (max-width: 768px) {
+  .title {
+    padding: 40px 38px 0 38px;
+    margin-bottom: 80px;
+  }
+
+  .title-slogan {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .title-slogan h2 {
+    font-size: 20px;
+  }
+
+  .title h2::before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+  }
+
+  .title h2::after {
+    display: none;
+  }
+
+  .experience {
+    flex-direction: column;
+    max-width: 100%;
+    padding-bottom: 80px;
+  }
+
+  .experience-2b,
+  .experience-2c {
+    width: 100%;
+  }
+
+  .experience-2b {
+    margin-bottom: 20px;
+  }
+
+  .experience-2b h3,
+  .experience-2c h3 {
+    margin-bottom: 4px;
+  }
+}
+
+/* work */
+.work {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
   max-width: 1296px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-bottom: 72px;
-}
-
-.work-list {
-  margin-bottom: 80px;
+  gap: 80px 24px;
 }
 
 .work-list img {
@@ -212,10 +408,7 @@ body {
 
 .work-list p,
 .tags li {
-  font-size: 16px;
-  font-weight: 400;
   line-height: 1.2;
-
 }
 
 .tags {
@@ -230,50 +423,50 @@ body {
   color: #3b3b3b;
 }
 
-.work-pages{
+.work-pages {
   max-width: 1296px;
   margin: 0 auto;
   margin-bottom: 120px;
 }
 
-.work-pageslist{
+.work-pageslist {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.work-pageslist li{
+.work-pageslist li {
   padding: 8px 13px;
   text-align: center;
   align-content: center;
   border-radius: 4px;
 }
 
-.work-pageslist li:hover{
-  background:#000;
-  color:#fff;
+.work-pageslist li:hover {
+  background: #000;
+  color: #fff;
 }
 
-.work-pageslist li a{
+.work-pageslist li a {
   display: block;
   color: #000;
   text-decoration: none;
 }
 
-.work-pageslist li a:hover{
+.work-pageslist li a:hover {
   color: #fff;
 }
 
-
-.work-pageslist{
+.work-pageslist {
   font-size: 24px;
 }
 
-
-
-@media(max-width:768px){
+@media (max-width: 768px) {
   .work {
     padding-right: 16px;
     padding-left: 16px;
+    margin-bottom: 48px;
+    padding-bottom: 0;
+    gap: 48px 0;
   }
 }
